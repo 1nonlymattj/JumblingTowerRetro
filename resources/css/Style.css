@@ -1,0 +1,339 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 5px;
+    border-color: gray;
+}
+
+.tower {
+    display: flex;
+}
+
+.column {
+    /* display: flex; */
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.block {
+    width: 125px;
+    height: 48px;
+    background-color: #ebb891;
+    margin-bottom: 4px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 22px;
+    font-weight: 400;
+    /* Prevent selection of numbers */
+}
+
+.green {
+    color: #009107;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.greenCard {
+    background-color: #60f167 !Important;
+    font-size: 18px;
+}
+
+.blackCard {
+    background-color: #000000 !Important;
+    color: #ffffff !Important;
+    font-size: 18px;
+}
+
+.blueCard {
+    background-color: #6495d4 !Important;
+    font-size: 18px;
+}
+
+.orangeCard {
+    background-color: #fc8c0c !Important;
+    font-size: 18px;
+}
+
+.purpleCard {
+    background-color: #ba79fc !Important;
+    font-size: 18px;
+}
+
+.black {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.blue {
+    color: #0017E3;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.orange {
+    color: #ff6f00;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.purple {
+    color: #9736f7;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.legendText {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.shown {
+    visibility: visible;
+}
+
+.block-number {
+    color: white;
+    font-size: 22px;
+}
+
+.legendButton {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+button {
+    cursor: pointer;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+}
+
+/* Start Dialog */
+
+.ui-dialog {
+    background: #f8f8f8;
+    border: 2px #000000 solid;
+    border-radius: 3px;
+    z-index: 1200 !important;
+}
+
+.ui-dialog-buttonpane {
+    text-align: left;
+    border-width: 1px 0 0 0;
+    background-image: none;
+    margin-top: 0.5em;
+    padding: 0.3em 1em 0.5em 0.4em;
+    border: none;
+}
+
+.ui-dialog-content {
+    min-height: 50px !important;
+    padding: 1em 2em;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #000000;
+}
+
+.ui-dialog-buttonset {
+    display: flex;
+    justify-content: center;
+}
+
+.ui-dialog-titlebar {
+    background: #c2c2c2;
+    text-align: center;
+    padding: 0.5em;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    color: #000000;
+}
+
+.ui-widget-content {
+    /* border: 1px solid #dddddd; */
+    background: #f8f8f8;
+    /* color: #000000; */
+}
+
+.ui-dialog-titlebar-close {
+    display: block;
+}
+
+.ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #232323;
+    opacity: 0.7;
+}
+
+.ui-front {
+    z-index: 100;
+}
+
+.dialogButton {
+    height: auto;
+    width: 175px;
+    border-radius: 8px;
+    background-color: #e7e5e5;
+    color: #000000;
+    font-size: 18px;
+    padding: 5px;
+    margin: 15px;
+}
+
+.alert-dialogButton {
+    left: -50%;
+}
+
+.legend-dialogButton {
+    left: -37%;
+}
+
+.stackup-dialogButton {
+    left: -22%;
+}
+
+.went-well-dialog,
+.went-well-dialog-buttonpane,
+.went-well-dialog-content,
+.went-well-dialog-buttonset,
+.went-well-dialog-titlebar,
+.went-well-widget-content {
+    background: #60f167;
+}
+
+.not-well-dialog,
+.not-well-dialog-buttonpane,
+.not-well-dialog-content,
+.not-well-dialog-buttonset,
+.not-well-dialog-titlebar,
+.not-well-widget-content {
+    background: #000000;
+    color: #ffffff
+}
+
+.learned-dialog,
+.learned-dialog-buttonpane,
+.learned-dialog-content,
+.learned-dialog-buttonset,
+.learned-dialog-titlebar,
+.learned-widget-content {
+    background: #6495d4;
+}
+
+.improved-dialog,
+.improved-dialog-buttonpane,
+.improved-dialog-content,
+.improved-dialog-buttonset,
+.improved-dialog-titlebar,
+.improved-widget-content {
+    background: #fc8c0c;
+}
+
+.fun-dialog,
+.fun-dialog-buttonpane,
+.fun-dialog-content,
+.fun-dialog-buttonset,
+.fun-dialog-titlebar,
+.fun-widget-content {
+    background: #ba79fc;
+}
+
+.rebuild-dialog-titlebar-close,
+.alert-dialog-titlebar-close {
+    display: none;
+}
+
+.alert-dialog-titlebar {
+    background: #c2c2c2;
+    text-align: center;
+    padding: 0.5em;
+    font-family: sans-serif;
+    font-size: 24px;
+    border: none;
+    color: #e94600 !important;
+}
+
+.alert-dialog-title {
+    float: left;
+    margin: 0.1em 0;
+    white-space: nowrap;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.alert-dialog-title::before {
+    content: "\26A0";
+    /* Unicode for caution sign */
+    left: 5px;
+    /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    /* Adjust as needed */
+}
+
+/* End Dialog */
+
+/* Side Nav */
+.sidenav {
+    height: auto;
+    width: auto;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    /* background-color: #656565; */
+    padding-top: 20px;
+    align-items: center;
+}
+
+.sidenav a {
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main-content {
+    margin-left: 7%;
+    padding: 20px;
+}
+
+.caution {
+    color: #e94600;
+    font-size: 22px !important;
+}
