@@ -105,36 +105,41 @@ function storeArrays() {
     learnedStored = sessionStorage.getItem('learned');
     improvedStored = sessionStorage.getItem('improve');
     funStored = sessionStorage.getItem('fun');
+    wentWellLength = wentWellStored ? JSON.parse(wentWellStored) : [];
+    notWellLength = notWellStored ? JSON.parse(notWellStored) : [];
+    learnedLength = learnedStored ? JSON.parse(learnedStored) : [];
+    improveLength = improvedStored ? JSON.parse(improvedStored) : [];
+    funLength = funStored ? JSON.parse(funStored) : [];
 
-    if (!wentWellStored) {
+    if (!wentWellStored || wentWellLength.length != wentWell.length) {
         wentWell = wentWell;
         sessionStorage.setItem("wentWell", JSON.stringify(wentWell));
     } else {
         wentWell = JSON.parse(wentWellStored);
     }
 
-    if (!notWellStored) {
+    if (!notWellStored || notWellLength.length != notWell.length) {
         notWell = notWell;
         sessionStorage.setItem("notWell", JSON.stringify(notWell));
     } else {
         notWell = JSON.parse(notWellStored);
     }
 
-    if (!learnedStored) {
+    if (!learnedStored || learnedLength.length != learned.length) {
         learned = learned;
         sessionStorage.setItem("learned", JSON.stringify(learned));
     } else {
         learned = JSON.parse(learnedStored);
     }
 
-    if (!improvedStored) {
+    if (!improvedStored || improveLength.length != improve.length) {
         improve = improve;
         sessionStorage.setItem("improve", JSON.stringify(improve));
     } else {
         improve = JSON.parse(improvedStored);
     }
 
-    if (!funStored) {
+    if (!funStored || funLength.length != fun.length) {
         fun = fun;
         sessionStorage.setItem("fun", JSON.stringify(fun));
     } else {

@@ -1,13 +1,13 @@
 function AlertDialog() {
     rows = 16;
-    $('<div id = dialog align =center> ' +
+    $('<div id = dialog align =center> ' + '<br><br>' +
         '<span> Default Tower Size is 16. </span>' + '<br><br>' +
         '<span> To Customize Tower Size press the </span>' +
         '<i class="fa-solid fa-plus"></i>' +
-        '<span> Button </span>' +
+        '<span> Button </span>' + '<br><br>' +
         '</div>'
     ).dialog({
-        title: ' Alert',
+        title: '   Alert',
         autoOpen: true,
         modal: true,
         width: $(window).width() > 400 ? 400 : 'auto',
@@ -28,6 +28,7 @@ function AlertDialog() {
             'ui-dialog-titlebar': 'alert-dialog-titlebar',
             'ui-dialog-title': 'alert-dialog-title',
             'ui-dialog-title::before': 'alert-dialog-title::before',
+            'ui-dialog-titlebar-close': 'alert-dialog-titlebar-close',
             'ui-dialog-title-close': 'alert-dialog-title-close'
         }
     });
@@ -36,7 +37,7 @@ function AlertDialog() {
 function StackUpDialog() {
     $('<div id = dialog align =center> ' +
         '<h3> Please select the number of rows for the tower</h3>' +
-        '<select id="rows-Dropdown">' +
+        '<select id="rows-Dropdown" class = rows-Drowpdown>' +
         '<option value="7">7</option><option value="8">8</option><option value="9">9</option>' +
         '<option value="10">10</option><option value="11">11</option><option value="12">12</option>' +
         '<option value="13">13</option><option value="14">14</option><option value="15">15</option>' +
@@ -118,7 +119,7 @@ function wentWellTowerCard(towerQuestions) {
         buttons: {
             'Ok': {
                 text: 'Close',
-                'class': 'dialogButton',
+                'class': 'dialogButton card-dialogButton',
                 'id': 'confim',
                 click: function () {
                     $(this).dialog('destroy');
@@ -128,6 +129,7 @@ function wentWellTowerCard(towerQuestions) {
         classes: {
             "ui-dialog": "went-well-dialog",
             "ui-dialog-titlebar": "went-well-dialog-titlebar",
+            'ui-dialog-titlebar-close': 'card-dialog-titlebar-close',
             "ui-dialog-buttonpane": "went-well-dialog-buttonpane",
             "ui-button": "went-well-dialog-button",
             "ui-dialog-content": "went-well-dialog-content",
@@ -151,7 +153,7 @@ function notWellTowerCard(towerQuestions) {
         buttons: {
             'Ok': {
                 text: 'Close',
-                'class': 'dialogButton',
+                'class': 'dialogButton card-dialogButton',
                 'id': 'confim',
                 click: function () {
                     $(this).dialog('destroy');
@@ -161,6 +163,7 @@ function notWellTowerCard(towerQuestions) {
         classes: {
             "ui-dialog": "not-well-dialog",
             "ui-dialog-titlebar": "not-well-dialog-titlebar",
+            'ui-dialog-titlebar-close': 'card-dialog-titlebar-close',
             "ui-dialog-buttonpane": "not-well-dialog-buttonpane",
             "ui-button": "not-well-dialog-button",
             "ui-dialog-content": "not-well-dialog-content",
@@ -184,7 +187,7 @@ function learnedTowerCard(towerQuestions, key) {
         buttons: {
             'Ok': {
                 text: 'Close',
-                'class': 'dialogButton',
+                'class': 'dialogButton card-dialogButton',
                 'id': 'confim',
                 click: function () {
                     $(this).dialog('destroy');
@@ -194,6 +197,7 @@ function learnedTowerCard(towerQuestions, key) {
         classes: {
             "ui-dialog": "learned-dialog",
             "ui-dialog-titlebar": "learned-dialog-titlebar",
+            'ui-dialog-titlebar-close': 'card-dialog-titlebar-close',
             "ui-dialog-buttonpane": "learned-dialog-buttonpane",
             "ui-button": "learned-dialog-button",
             "ui-dialog-content": "learned-dialog-content",
@@ -217,7 +221,7 @@ function improvedTowerCard(towerQuestions, key) {
         buttons: {
             'Ok': {
                 text: 'Close',
-                'class': 'dialogButton',
+                'class': 'dialogButton card-dialogButton',
                 'id': 'confim',
                 click: function () {
                     $(this).dialog('destroy');
@@ -227,6 +231,7 @@ function improvedTowerCard(towerQuestions, key) {
         classes: {
             "ui-dialog": "improved-dialog",
             "ui-dialog-titlebar": "improved-dialog-titlebar",
+            'ui-dialog-titlebar-close': 'card-dialog-titlebar-close',
             "ui-dialog-buttonpane": "improved-dialog-buttonpane",
             "ui-button": "improved-dialog-button",
             "ui-dialog-content": "improved-dialog-content",
@@ -250,7 +255,7 @@ function funTowerCard(towerQuestions, key) {
         buttons: {
             'Ok': {
                 text: 'Close',
-                'class': 'dialogButton',
+                'class': 'dialogButton card-dialogButton',
                 'id': 'confim',
                 click: function () {
                     $(this).dialog('destroy');
@@ -260,6 +265,7 @@ function funTowerCard(towerQuestions, key) {
         classes: {
             "ui-dialog": "fun-dialog",
             "ui-dialog-titlebar": "fun-dialog-titlebar",
+            'ui-dialog-titlebar-close': 'card-dialog-titlebar-close',
             "ui-dialog-buttonpane": "fun-dialog-buttonpane",
             "ui-button": "fun-dialog-button",
             "ui-dialog-content": "fun-dialog-content",
@@ -272,11 +278,11 @@ function funTowerCard(towerQuestions, key) {
 function RebuildOptionDialog() {
     let rebuild = 'Current Size: ' + rows;
     if (rows != 16) {
-        $('<div id = dialog align =center> ' +
-            '<span> Select Tower Rebuild Option </span>' +
+        $('<div id = dialog align =center> ' + '<br><br>' +
+            '<span> Select Tower Rebuild Option </span>' + '<br><br>' +
             '</div>'
         ).dialog({
-            title: 'Alert',
+            title: '   Alert',
             autoOpen: true,
             modal: true,
             width: $(window).width() > 400 ? 400 : 'auto',
@@ -306,7 +312,10 @@ function RebuildOptionDialog() {
                 }
             },
             classes: {
-                "ui-dialog-titlebar-close ": "rebuild-dialog-titlebar-close "
+                'ui-dialog-titlebar': 'rebuild-dialog-titlebar',
+                'ui-dialog-title': 'rebuild-dialog-title',
+                'ui-dialog-title::before': 'rebuild-dialog-title::before',
+                'ui-dialog-titlebar-close': 'rebuild-dialog-titlebar-close'
             }
         });
     } else {

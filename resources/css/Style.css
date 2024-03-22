@@ -149,6 +149,16 @@ button {
     border: none;
 }
 
+
+.ui-dialog .ui-dialog-title {
+    float: left;
+    margin: 0.1em 0;
+    white-space: nowrap;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .ui-dialog-content {
     min-height: 50px !important;
     padding: 1em 2em;
@@ -179,8 +189,29 @@ button {
     /* color: #000000; */
 }
 
-.ui-dialog-titlebar-close {
-    display: block;
+.ui-dialog .ui-dialog-titlebar {
+    padding: 0.4em 1em;
+    position: relative;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+    position: absolute;
+    right: 0.3em;
+    top: 50%;
+    width: 20px;
+    margin: -22px -6px 0 0;
+    /* margin: -10px 0 0 0; */
+    padding: 1px;
+    height: 20px;
+    background: none;
+    border: none;
+}
+
+.ui-dialog .ui-dialog-titlebar-close:hover {
+    background-color: #c2c2c2;
+    /* Change the background color on hover */
+    color: #000000;
+    /* Change the text color on hover */
 }
 
 .ui-widget-overlay {
@@ -209,15 +240,23 @@ button {
 }
 
 .alert-dialogButton {
-    left: -50%;
+    left: -22%;
+    width: 250px !important;
 }
 
 .legend-dialogButton {
-    left: -37%;
+    left: -12%;
+    width: 250px !important;
 }
 
 .stackup-dialogButton {
-    left: -22%;
+    left: -1%;
+    width: 250px !important;
+}
+
+.card-dialogButton {
+    left: -20%;
+    width: 250px !important;
 }
 
 .went-well-dialog,
@@ -266,31 +305,29 @@ button {
     background: #ba79fc;
 }
 
-.rebuild-dialog-titlebar-close,
-.alert-dialog-titlebar-close {
-    display: none;
+.stackup-dialog-titlebar-close,
+.legend-dialog-titlebar-close {
+    display: block !important;
 }
 
-.alert-dialog-titlebar {
-    background: #c2c2c2;
-    text-align: center;
-    padding: 0.5em;
-    font-family: sans-serif;
-    font-size: 24px;
-    border: none;
+.alert-dialog-titlebar-close,
+.card-dialog-titlebar-close {
+    display: none !important;
+}
+
+.rebuild-dialog-titlebar-close {
+    display: block !important;
+    margin: -30px -6px 0 0 !important;
+}
+
+.alert-dialog-titlebar,
+.rebuild-dialog-titlebar {
+    font-size: 24px !important;
     color: #e94600 !important;
 }
 
-.alert-dialog-title {
-    float: left;
-    margin: 0.1em 0;
-    white-space: nowrap;
-    width: 90%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.alert-dialog-title::before {
+.alert-dialog-title::before,
+.rebuild-dialog-title::before {
     content: "\26A0";
     /* Unicode for caution sign */
     left: 5px;
@@ -336,4 +373,16 @@ button {
 .caution {
     color: #e94600;
     font-size: 22px !important;
+}
+
+.rows-Drowpdown {
+    width: auto;
+    height: auto;
+    border: solid 1px #000000;
+    background: none;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 1%;
+    text-align: center;
+
 }
